@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background-color: #c292c1;
+  --toolbar-color: #eb74e9;
+  --tab-color: #e5b9e4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: var(--background-color);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+* {
+  font-size: 23px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.editorBlock,
+.previewBlock {
+  box-shadow: 0px 0px 30px rgb(116, 116, 116);
+}
+
+.editorHeader,
+.previewHeader {
+  background-color: var(--toolbar-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  font-weight: bold;
+  height: 50px;
+}
+
+.editorBlock {
+  width: 60vw;
+  height: 30vh;
+  /* height: 100vh; */
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.editorHeader,
+.editor {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.editorHeader {
+  height: 40px;
+}
+
+.editor {
+  height: 100%;
+  background-color: var(--tab-color);
+  font-family: Russo One;
+  padding: 5px;
+  border-top: none;
+  box-sizing: border-box;
+  resize: none;
+  outline: none;
+  font-size: 0.875rem;
+}
+
+.previewBlock {
+  margin-top: 100px;
+  width: 80vw;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  /* height: 100vh; */
+}
+
+.previewHeader,
+.preview {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.preview {
+  text-align: start;
+  font-size: 0.875rem;
+  padding: 5px;
+  background-color: var(--tab-color);
+  font-family: Russo One;
+  border-top: none;
+  height: 100%;
+  box-sizing: border-box;
 }
