@@ -15,8 +15,6 @@ body {
 }
 
 * {
-  font-size: 23px;
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -42,7 +40,7 @@ body {
   align-items: center;
   padding: 0px 10px;
   font-weight: bold;
-  height: 50px;
+  min-height: 50px;
 }
 
 .editorBlock {
@@ -86,8 +84,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
-  /* height: 100vh; */
+  min-height: 50vh;
+  height: auto;
 }
 
 .previewHeader,
@@ -97,12 +95,19 @@ body {
 }
 
 .preview {
+  height: 100%;
   text-align: start;
   font-size: 0.875rem;
-  padding: 5px;
+  padding: 5px 25px;
   background-color: var(--tab-color);
   font-family: Russo One;
   border-top: none;
-  height: 100%;
   box-sizing: border-box;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
